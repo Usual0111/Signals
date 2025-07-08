@@ -189,26 +189,36 @@ color: #000; /* чёрный текст на светло-фиолетном ф�
 opacity: 0.9;
  }
 
-/* Gradient fade effects */
+/* Gradient fade effects with rounded ends */
+.exchanges-carousel {
+  position: relative;
+  overflow: hidden;       /* чтобы скругления работали */
+  border-radius: var(--radius);
+}
+
 .exchanges-carousel::before,
 .exchanges-carousel::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 30px;
-    pointer-events: none;
-    z-index: 2;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .exchanges-carousel::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+  left: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
 }
 
 .exchanges-carousel::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+  right: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0.8), transparent);
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
 }
 
 .logo {
