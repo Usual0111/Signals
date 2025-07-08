@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Signals - Crypto Trading Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">⚡ AI SIGNALS</div>
+            <div class="tagline">AGGREGATED CRYPTO TRADING SIGNALS FROM PRO TRADERS</div>
+        </div>
+
+        <div class="exchanges-section">
+            <div class="exchanges-title">
+                <h2>🎁 Tap to see which platforms give you $ for free</h2>
+            </div>
+            <div class="exchanges-carousel">
+                <div class="exchanges-container">
+                    <div class="exchange-card">
+                        <div class="exchange-name">Binance</div>
+                        
+<a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="Binance"
+   data-bonus="100"
+   data-referral="https://binance.com/signup?ref=XXX">
+  Get $100
+</a>
+                    </div>
+                    <div class="exchange-card">
+                        <div class="exchange-name">OKX</div>
+                        
+<a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="OKX"
+   data-bonus="100"
+   data-referral="https://okx.com">
+  Get $100
+</a>
+
+                    </div>
+                    <div class="exchange-card">
+                        <div class="exchange-name">Bybit</div>
+                      
+<a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="Bybit"
+   data-bonus="100"
+   data-referral="https://bybit.com">
+  Get $100
+</a>                      
+                      
+                    </div>
+                    <div class="exchange-card">
+                        <div class="exchange-name">BingX</div>
+                                             
+<a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="BingX"
+   data-bonus="100"
+   data-referral="https://bingx.com">
+  Get $100
+</a>                      
+                      
+                    </div>
+                    <div class="exchange-card">
+                        <div class="exchange-name">MEXC</div>
+                        
+<a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="MEXC"
+   data-bonus="100"
+   data-referral="https://binance.com/signup?ref=XXX">
+  Get $100
+</a>                      
+                      
+                    </div>
+                    <div class="exchange-card">
+                        <div class="exchange-name">KuCoin</div>
+                      
+ <a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="KuCoin"
+   data-bonus="100"
+   data-referral="https://binance.com/signup?ref=XXX">
+  Get $100
+</a>                     
+                      
+                    </div>
+                    <div class="exchange-card">
+                        <div class="exchange-name">HTX</div>
+                      
+<a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="HTX"
+   data-bonus="100"
+   data-referral="https://binance.com/signup?ref=XXX">
+  Get $100
+</a>                      
+                      
+                    </div>
+                    <div class="exchange-card">
+                        <div class="exchange-name">Gate.io</div>
+                                              
+ <a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="Gate.io"
+   data-bonus="100"
+   data-referral="https://binance.com/signup?ref=XXX">
+  Get $100
+</a>                     
+                      
+                    </div>
+                    <div class="exchange-card">
+                        <div class="exchange-name">Bitget</div>
+                      
+<a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="Bitget"
+   data-bonus="100"
+   data-referral="https://binance.com/signup?ref=XXX">
+  Get $100
+</a>                      
+                      
+                    </div>
+                    <div class="exchange-card">
+                        <div class="exchange-name">CoinEx</div>
+                      
+<a href="#"
+   class="register-btn get-bonus-btn"
+   data-exchange="CoinEx"
+   data-bonus="100"
+   data-referral="https://binance.com/signup?ref=XXX">
+  Get $100
+</a>                      
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value" id="totalSignals">247</div>
+                <div class="stat-label">TOTAL SIGNALS</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="activeSignals">1</div>
+                <div class="stat-label">ACTIVE NOW</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="successRate">73%</div>
+                <div class="stat-label">SUCCESS RATE</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="onlineUsers">-30</div>
+                <div class="stat-label">USERS ONLINE</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="long">📈 LONG</button>
+            <button class="filter-btn" data-filter="short">📉 SHORT</button>
+            <button class="info-btn" onclick="openModal()">ℹ️ How this works</button>
+        </div>
+
+        <div class="signals-grid" id="signalsGrid">
+            <!-- Signals will be populated here -->
+        </div>
+
+        <!-- Modal -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <button class="close" onclick="closeModal()">&times;</button>
+
+    <div class="modal-title">ℹ️ What do these terms mean?</div>
+
+    <div class="modal-item">
+      <span class="modal-item-title">📘 Entry</span>
+      <span class="modal-item-desc">The price where you open the trade</span>
+    </div>
+
+    <div class="modal-item">
+      <span class="modal-item-title">🎯 TP (Take Profit)</span>
+      <span class="modal-item-desc">The price where you take your profit</span>
+    </div>
+
+    <div class="modal-item">
+      <span class="modal-item-title">🛡 SL (Stop Loss)</span>
+      <span class="modal-item-desc">The price to close the trade if it goes wrong</span>
+    </div>
+
+    <div class="modal-item">
+      <span class="modal-item-title">📈 LONG</span>
+      <span class="modal-item-desc">You buy, expecting the price to go UP</span>
+    </div>
+
+    <div class="modal-item">
+      <span class="modal-item-title">📉 SHORT</span>
+      <span class="modal-item-desc">You sell, expecting the price to go DOWN</span>
+    </div>
+
+    <div class="modal-item">
+      <span class="modal-item-title">💼 Margin</span>
+      <span class="modal-item-desc">How your funds are managed (use Isolated if you're new)</span>
+    </div>
+
+    <div class="modal-item">
+      <span class="modal-item-title">📊 Leverage</span>
+      <span class="modal-item-desc">How much you multiply your position (like x5, x10)</span>
+    </div>
+
+    <div class="modal-disclaimer">
+      🧠 This is not financial advice. Start small and practice before using big amounts.
+    </div>
+  </div>
+</div>
+
+
+        <div class="admin-panel">
+            <div class="admin-title">⚙️ ADMIN PANEL - ADD SIGNAL</div>
+            <div class="admin-form">
+                <input type="text" class="admin-input" id="pairInput" placeholder="Pair (e.g., BTC/USDT)">
+                <select class="admin-input" id="typeInput">
+                    <option value="long">LONG</option>
+                    <option value="short">SHORT</option>
+                </select>
+                <input type="number" class="admin-input" id="entryInput" placeholder="Entry Price">
+                <input type="number" class="admin-input" id="tpInput" placeholder="Take Profit">
+                <input type="number" class="admin-input" id="slInput" placeholder="Stop Loss">
+                <select class="admin-input" id="exchangeInput">
+                    <option value="binance">Binance</option>
+                    <option value="okx">OKX</option>
+                    <option value="bitget">Bitget</option>
+                </select>
+                <select class="admin-input" id="marginInput">
+                    <option value="Isolated">Isolated</option>
+                    <option value="Cross">Cross</option>
+                </select>
+                <input type="text" class="admin-input" id="leverageInput" placeholder="Leverage (e.g., x10)">
+                <input type="text" class="admin-input" id="commentInput" placeholder="AI Comment">
+                <input type="text" class="admin-input" id="sourceInput" placeholder="Source Channel">
+            </div>
+            <button class="add-signal-btn" onclick="addSignal()">ADD SIGNAL</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  
+  <!-- Bonus Modal -->
+<div id="bonusModal" class="modal">
+  <div class="modal-content">
+    <button class="close" onclick="closeBonusModal()">&times;</button>
+    <h2 id="bonus-modal-title" class="text-white font-semibold text-lg mb-4">
+      <!-- динамически заполняется -->
+    </h2>
+    <ol class="list-decimal list-inside text-gray-300 mb-4 space-y-2">
+      <li>Tap the button below to register on <span id="modal-exchange-name" class="font-semibold text-white"></span></li>
+      <li>Verify your account (KYC) — takes 2–3 minutes</li>
+      <li>Deposit $<span id="modal-bonus-amount"></span>+ and claim your bonus</li>
+    </ol>
+    <p class="text-green-400 mb-4">✅ Bonus will be automatically added after step 3</p>
+    <a id="bonus-modal-claim"
+       href="#"
+       target="_blank"
+       class="trade-btn">
+      Claim Your Bonus on <span id="modal-exchange-name-2" class="font-semibold"></span>
+    </a>
+  </div>
+</div>
+  
+</body>
+</html>
